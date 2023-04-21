@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a url="{% url 'main_app:index'%}">Product list</a>
+<a url="{% url 'main_app:create_product'%}">Create product</a>
+ {% block content %} {% endblock %}
+</body>
+</html>
