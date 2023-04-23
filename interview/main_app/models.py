@@ -17,7 +17,7 @@ class ProductInformation(models.Model):
         verbose_name_plural = "продукты"
 
     product_name = models.CharField(verbose_name='Название продукта',max_length=256)
-    date_of_receipt = models.DateTimeField(verbose_name="дата поступления", auto_now=True)
+    date_of_receipt = models.DateTimeField(verbose_name="Дата поступления", auto_now=True)
     price = models.DecimalField(verbose_name="цена", max_digits=8, decimal_places=2)
     units_of_measurement = models.IntegerField(verbose_name="Единица измерения", choices=MEASURMENT)
     provider = models.CharField(verbose_name="Наименование поставщика", max_length=256, blank=True)
