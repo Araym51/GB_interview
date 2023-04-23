@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 from .models import ProductInformation
+
 # Register your models here.
 """ 
 4. Проверить правильность созданной модели, зарегистрировав ее в админке приложения.

@@ -1,8 +1,8 @@
-from django.shortcuts import render
 from django.http import HttpResponseRedirect
+from django.shortcuts import render
 
-from .models import ProductInformation
 from .forms import ProductInformationForm
+from .models import ProductInformation
 
 # Create your views here.
 

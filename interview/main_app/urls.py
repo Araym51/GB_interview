@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import products_veiw, create_product
+from .views import create_product, products_veiw
 
 """
 6. Настроить файл urls.py внутреннего каталога проекта. Он должен содержать два шаблона url-адресов:
