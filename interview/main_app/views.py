@@ -2,9 +2,10 @@ from django.shortcuts import render
 
 # Create your views here.
 
+
 def products_veiw(request):
-    pass
+    return render(request, 'main_app/product_list.html')
 
 
 def create_product(request):
-    pass
+    return render(request, 'main_app/create_product.html')
