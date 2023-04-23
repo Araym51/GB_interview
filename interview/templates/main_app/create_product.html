@@ -1,4 +1,11 @@
 {% extends 'main_app/base.html' %}
 {% block content %}
-<h1>create product page</h1>
+<form action="{% url 'main_app:add_product' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="card">
+        <div class="card-header">Добавить продукт</div>
+        <div class="card-body">{{ form.as_p }}</div>
+        <div class="card-footer"><input class="form-control btn btn-info" type="submit" value="Добавить"></div>
+    </div>
+</form>
 {% endblock %}

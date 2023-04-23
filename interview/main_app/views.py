@@ -1,11 +1,23 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
+
+from .models import ProductInformation
+from .forms import ProductInformationForm
 
 # Create your views here.
 
 
 def products_veiw(request):
-    return render(request, 'main_app/product_list.html')
+    return render(request, 'main_app/product_list.html', {'object_list': ProductInformation.objects.all()})
 
 
 def create_product(request):
-    return render(request, 'main_app/create_product.html')
+    if request.method == 'POST':
+        form = ProductInformationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/')
+    else:
+        form = ProductInformationForm()
+
+    return render(request, 'main_app/create_product.html', {'form': form})

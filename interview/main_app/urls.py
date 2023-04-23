@@ -19,5 +19,5 @@ app_name = 'main_app'
 
 urlpatterns = [
     path('', products_veiw, name='index'),
-    path('create_product', create_product, name='create_product')
+    path('add_product', create_product, name='add_product')
 ]
